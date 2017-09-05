@@ -1,0 +1,21 @@
+{
+    "name": "Padre",
+    "children": [
+      {
+        "name": "1er nieto",
+        "children": [
+          { "name": "1er bisnieto folder", "id":1 },
+          { "name": "2do bisnieto folder", "id":2 },
+          { "name": "3er bisnieto folder" , "id":3 }
+        ]
+      },
+      {
+        "name": "2er nieto",
+        "children": [
+          { "name": "1er bisnieto folder", "id":1 },
+          { "name": "2do bisnieto folder", "id":2 },
+          { "name": "3er bisnieto folder", "id":3}
+        ]
+      }
+    ]
+  }

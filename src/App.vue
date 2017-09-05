@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <!-- <cTree></cTree> -->
-      <!-- the demo root element -->
     <ul>
       <item
         class="list"
@@ -15,36 +11,24 @@
 
 <script>
 import item from './components/cTree.vue'
+import axios from 'axios'
+
 export default {
   name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-      // demo data
-      treeData: {
-        name: 'Padre',
-        children: [
-          {
-            name: '1er nieto',
-            children: [
-              { name: '1er bisnieto folder', id:1 },
-              { name: '2do bisnieto folder', id:2 },
-              { name: '3er bisnieto folder' , id:3
-              }
-            ]
-          },
-          {
-            name: '2er nieto',
-            children: [
-              { name: '1er bisnieto folder', id:1 },
-              { name: '2do bisnieto folder', id:2 },
-              { name: '3er bisnieto folder' , id:3}
-            ]
-          }
-        ]
-      }
-
-    }
+  data: () => ({
+    treeData: []
+  }),
+  created() {
+    axios.get(`./api.json`)
+    .then(response => {
+      // JSON responses are automatically parsed.
+      this.treeData = response.data
+      console.log(response.data);
+    })
+    .catch(e => {
+      console.log(e);
+      //this.errors.push(e)
+    })
   },
   components: {
     item
