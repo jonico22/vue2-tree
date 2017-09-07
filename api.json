@@ -1,20 +1,20 @@
 {
-    "name": "Padre",
+    "name": "bloques",
     "children": [
       {
-        "name": "1er nieto",
+        "name": "padre",
         "children": [
-          { "name": "1er bisnieto folder", "id":1 },
-          { "name": "2do bisnieto folder", "id":2 },
-          { "name": "3er bisnieto folder" , "id":3 }
+          { "name": "hijos", "id":1, "count" : 4 , "state" : 0 },
+          { "name": "hijos", "id":2, "count": 5 ,"state" : 1},
+          { "name": "hijos" , "id":3, "count": 6 , "state" : 2}
         ]
       },
       {
-        "name": "2er nieto",
+        "name": "padre",
         "children": [
-          { "name": "1er bisnieto folder", "id":1 },
-          { "name": "2do bisnieto folder", "id":2 },
-          { "name": "3er bisnieto folder", "id":3}
+          { "name": "hijos", "id":1 , "count": 2 , "state" : 0},
+          { "name": "hijos", "id":2 , "count" : 1, "state" : 1},
+          { "name": "hijos", "id":3, "count" : 0 , "state" : 2}
         ]
       }
     ]

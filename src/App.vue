@@ -12,6 +12,10 @@
 <script>
 import item from './components/cTree.vue'
 import axios from 'axios'
+import vueFilter from 'vue-filter'
+import vue from 'vue'
+vue.use(vueFilter)
+
 
 export default {
   name: 'app',
@@ -23,7 +27,6 @@ export default {
     .then(response => {
       // JSON responses are automatically parsed.
       this.treeData = response.data
-      console.log(response.data);
     })
     .catch(e => {
       console.log(e);
